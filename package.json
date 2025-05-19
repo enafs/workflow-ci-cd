@@ -1,0 +1,10 @@
+{
+  "name": "infra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'tema buildado'"
+  },
+  "repository": "git@github.com:enafs/workflow-ci-cd.git",
+  "license": "MIT"
+}

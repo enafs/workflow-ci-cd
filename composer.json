@@ -1,0 +1,16 @@
+{
+    "name": "erick/infra",
+    "description": "Workflow CI/CD",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Erick\\Infra\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erick Feitosa"
+        }
+    ],
+    "require": {}
+}
