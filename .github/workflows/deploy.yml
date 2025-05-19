@@ -21,4 +21,9 @@ jobs:
         run: yarn && yarn build
         
       - name: Executando composer install para dependências do Wordpress
-        run: echo ${{ secrets.MY_SECRET_TOKEN }}
+        env:
+          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.MY_SECRET_TOKEN }}"} }'
+        uses: php-actions/composer@v5
+        with:
+          version: 2
+          args: --ignore-platform-reqs
