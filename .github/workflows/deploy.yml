@@ -27,3 +27,14 @@ jobs:
         with:
           version: 2
           args: --ignore-platform-reqs
+
+      - name: Copiando arquivos dos plugins para ambiente de testes
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: --no-perms -O --exclude=.git/ --exclude=.env --exclude=node_modules --delete -Prltvz
+          path: ./
+          remote_path: /home/ec2-user/wp-content/tema
+          remote_host: ${{ secrets.MY_SERVER }}
+          remote_port: ${{ secrets.SSH_PORT }}
+          remote_user: ${{ secrets.MY_USER_SERVER }}
+          remote_key: ${{ secrets.SSH_DEPLOY }}
