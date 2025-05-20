@@ -22,7 +22,7 @@ jobs:
         
       - name: Executando composer install para dependências do Wordpress
         env:
-          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.MY_SECRET_TOKEN }}"} }'
+          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.COMPOSER_TOKEN }}"} }'
         uses: php-actions/composer@v6
         with:
           version: 2
